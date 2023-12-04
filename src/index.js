@@ -2,8 +2,10 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
+  let iconElement = document.querySelector("#current-temperature-icon");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 }
 
 function search(event) {
