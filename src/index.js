@@ -26,10 +26,10 @@ function searchCity(city) {
   axios.get(apiUrl).then(refreshWeather);
 }
 
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-input");
-  searchCity(searchInput.value);
+function search(event){
+  event.preventDefault()
+  let searchInput = document.querySelector("#search-input")
+  searchCity(searchInput.value)
 }
 
 function formatDate(date) {
